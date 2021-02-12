@@ -19,12 +19,12 @@ console.log(list)
                                 }
 
                                 return(
-                                    <label key={i} htmlFor={v} style={{width: 200}}>
+                                    <label key={i} htmlFor={v} style={{width: 220}}>
                                         <input 
                                         type="checkbox" 
                                         //checked={checked}
                                         name={i} 
-                                       
+                                        style={{marginRight: '10px'}}
                                         defaultChecked={(list[i]===true)?true:false}
                                         onChange={handleCheckboxClick} />
                                         <a href={`https://www.bing.com/images/search?q=${i}+license+plate`} target="new">{i}</a>
