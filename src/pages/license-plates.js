@@ -23,6 +23,14 @@ class LicensePlates extends Component {
     updateDB("cg-plates", this.state.plates)
   }
 
+  resetGame = () => {
+      Object.keys(this.state.plates).map((i, v)=>{
+        this.state.plates[i] = false;
+      })
+
+      updateDB("cg-plates", this.state.plates)
+  }
+
   render(){
     const usaList = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
     if (Object.keys(platesObj).length === 0) {
@@ -37,9 +45,10 @@ class LicensePlates extends Component {
         <GameContext.Provider
           value={{
             plates: this.state.plates,
-            updatePlates: this.updatePlates
+            updatePlates: this.updatePlates,
+            resetGame: this.resetGame
           }}>
-            <Checklist onStateClicked={this.updatePlates} list={this.state.plates}/>          
+            <Checklist onStateClicked={this.updatePlates} list={this.state.plates}/>         
         </GameContext.Provider>
         
       </div>

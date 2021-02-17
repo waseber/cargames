@@ -2,5 +2,6 @@ import React from 'react';
 
 export default React.createContext({
     plates:{},
-    updatePlates:()=>{}
+    updatePlates:()=>{},
+    resetGame:()=>{},
 });
