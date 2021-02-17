@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/cargames/static/css/main.955e1f64.chunk.css",
-    "main.js": "/cargames/static/js/main.31da3524.chunk.js",
-    "main.js.map": "/cargames/static/js/main.31da3524.chunk.js.map",
+    "main.css": "/cargames/static/css/main.07498187.chunk.css",
+    "main.js": "/cargames/static/js/main.7448dac0.chunk.js",
+    "main.js.map": "/cargames/static/js/main.7448dac0.chunk.js.map",
     "runtime-main.js": "/cargames/static/js/runtime-main.89b93254.js",
     "runtime-main.js.map": "/cargames/static/js/runtime-main.89b93254.js.map",
     "static/js/2.c993cbca.chunk.js": "/cargames/static/js/2.c993cbca.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.5d48c1b9.chunk.js": "/cargames/static/js/3.5d48c1b9.chunk.js",
     "static/js/3.5d48c1b9.chunk.js.map": "/cargames/static/js/3.5d48c1b9.chunk.js.map",
     "index.html": "/cargames/index.html",
-    "static/css/main.955e1f64.chunk.css.map": "/cargames/static/css/main.955e1f64.chunk.css.map",
+    "static/css/main.07498187.chunk.css.map": "/cargames/static/css/main.07498187.chunk.css.map",
     "static/js/2.c993cbca.chunk.js.LICENSE.txt": "/cargames/static/js/2.c993cbca.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.89b93254.js",
     "static/js/2.c993cbca.chunk.js",
-    "static/css/main.955e1f64.chunk.css",
-    "static/js/main.31da3524.chunk.js"
+    "static/css/main.07498187.chunk.css",
+    "static/js/main.7448dac0.chunk.js"
   ]
 }
