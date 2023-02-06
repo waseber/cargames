@@ -5,6 +5,8 @@ import cookie from 'cookie'
 export default ({ store, req }) => {
   createPersistedState({
     storage: {
+      key: 'car-games',
+      paths: ['index.selectedStates'],
       getItem: (key) => {
         // See https://nuxtjs.org/guide/plugins/#using-process-flags
         if (process.server) {
