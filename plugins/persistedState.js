@@ -6,7 +6,7 @@ export default ({ store, req }) => {
   createPersistedState({
     storage: {
       key: 'car-games',
-      paths: ['index.selectedStates'],
+      paths: ['index.selectedStates', 'index.countries'],
       getItem: (key) => {
         // See https://nuxtjs.org/guide/plugins/#using-process-flags
         if (process.server) {

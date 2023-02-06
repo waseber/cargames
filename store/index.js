@@ -1,4 +1,5 @@
 export const state = () => ({
+  countries: [],
   selectedStates: [],
   usStates: [
     'Alabama',
@@ -71,16 +72,39 @@ export const state = () => ({
   ],
 })
 
-export const getters = {}
+export const getters = {
+  getStates(state) {
+    const returnArr = []
+    if (state.countries.includes('us'))
+      returnArr.push({ title: 'United States', states: state.usStates })
+
+    if (state.countries.includes('ca'))
+      returnArr.push({ title: 'Canada', states: state.caProvinces })
+
+    if (state.countries.includes('usg'))
+      returnArr.push({
+        title: 'United States Government',
+        states: state.usGovernment,
+      })
+
+    return returnArr
+  },
+}
 
 export const mutations = {
   setSelectedStates(state, payload) {
     state.selectedStates = [...payload]
+  },
+  setCountries(state, payload) {
+    state.countries = [...payload]
   },
 }
 
 export const actions = {
   setSelectedStates({ commit }, payload) {
     commit('setSelectedStates', payload)
+  },
+  setCountries({ commit }, payload) {
+    commit('setCountries', payload)
   },
 }
