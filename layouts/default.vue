@@ -48,6 +48,11 @@ export default {
           title: 'License Plate',
           to: '/',
         },
+        /* {
+          icon: 'mdi-apps',
+          title: 'License Plate Count',
+          to: '/license-plate-count',
+        }, */
       ],
       title: 'Car Games',
     }
