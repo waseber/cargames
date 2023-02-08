@@ -24,33 +24,34 @@
           />
         </div>
         <v-btn @click.prevent="setSelectedStates([])">Clear All</v-btn>
+
+        <v-dialog v-model="dialog" width="500">
+          <template #activator="{ on, attrs }">
+            <v-btn color="red lighten-2" dark v-bind="attrs" v-on="on">
+              Rules
+            </v-btn>
+          </template>
+
+          <v-card>
+            <v-card-title class="text-h6 blue">
+              License Plate Game Rules
+            </v-card-title>
+
+            <v-card-text class="pa-5">
+              Each time you find a new license plate mark it in the list below.
+            </v-card-text>
+
+            <v-divider></v-divider>
+
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn color="primary" text @click="dialog = false">
+                Close
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
       </div>
-    </v-row>
-    <v-row>
-      <v-dialog v-model="dialog" width="500">
-        <template #activator="{ on, attrs }">
-          <v-btn color="red lighten-2" dark v-bind="attrs" v-on="on">
-            Rules
-          </v-btn>
-        </template>
-
-        <v-card>
-          <v-card-title class="text-h6 blue">
-            License Plate Game Rules
-          </v-card-title>
-
-          <v-card-text class="pa-5">
-            Each time you find a new license plate mark it in the list below.
-          </v-card-text>
-
-          <v-divider></v-divider>
-
-          <v-card-actions>
-            <v-spacer></v-spacer>
-            <v-btn color="primary" text @click="dialog = false"> Close </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-dialog>
     </v-row>
     <v-row justify="center" align="center">
       <v-col cols="12" sm="8" md="6">
@@ -87,7 +88,7 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      // selected: [''],
+      dialog: false,
     }
   },
   computed: {
