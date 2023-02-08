@@ -8,14 +8,22 @@
             v-model="countriesModel"
             label="United States"
             value="us"
+            class="px-3"
           />
-          <v-checkbox v-model="countriesModel" label="Canada" value="ca" />
+          <v-checkbox
+            v-model="countriesModel"
+            label="Canada"
+            value="ca"
+            class="px-3"
+          />
           <v-checkbox
             v-model="countriesModel"
             label="United States Government"
             value="usg"
+            class="px-3"
           />
         </div>
+        <v-btn @click.prevent="setSelectedStates([])">Clear All</v-btn>
       </div>
     </v-row>
     <v-row justify="center" align="center">
@@ -25,9 +33,14 @@
           <div
             v-for="(state, sIdx) in country.states"
             :key="sIdx"
-            class="d-flex align-center"
+            class="d-flex align-end my-0"
           >
-            <v-checkbox v-model="selected" :label="state" :value="state" />
+            <v-checkbox
+              v-model="selected"
+              hide-details
+              :label="state"
+              :value="state"
+            />
             <a
               :href="`https://www.google.com/search?q=${state}+license+plate&source=lnms&tbm=isch`"
               taret="_new"
